@@ -1,0 +1,38 @@
+components:
+  schemas:
+    frequency:
+      type: string
+      description: time unit
+      enum: [daily, monthly, yearly, weekly]
+
+    format:
+      type: string
+      description: api response format
+      enum: [json, tsv]
+      default: json
+
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        username:
+          type: string
+        firstName:
+          type: string
+        lastName:
+          type: string
+        birthday:
+          type: string
+          format: date
+        email:
+          type: string
+        password:
+          type: string
+        phone:
+          type: string
+        userStatus:
+          type: integer
+          description: User Status
+          format: int32

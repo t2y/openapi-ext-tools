@@ -1,0 +1,17 @@
+components:
+  schemas:
+    frequency:
+      type: string
+      description: time unit
+      enum: [daily, monthly, yearly, weekly]
+
+    format:
+      type: string
+      description: api response format
+      enum: [json, tsv]
+      default: json
+
+    Users:
+      type: array
+      items:
+        $ref: 'schemas_user.yaml#/components/schemas/User'
