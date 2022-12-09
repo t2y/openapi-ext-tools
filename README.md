@@ -1,5 +1,7 @@
 # openapi-ext-tools
 
+![test workflow](https://github.com/t2y/openapi-ext-tools/actions/workflows/test.yml/badge.svg)
+
 extended tools for openapi spec
 
 ## bundle multiple yaml files into single openapi.yaml
