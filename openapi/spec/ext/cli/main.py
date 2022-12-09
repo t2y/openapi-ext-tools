@@ -6,7 +6,7 @@ import sys
 from pprint import pprint
 
 from openapi_spec_validator import validate_spec_url
-from openapi_spec_validator.exceptions import ValidationError
+from openapi_spec_validator.exceptions import OpenAPISpecValidatorError
 
 from ..utils.log import log
 from ..spec import BundledSpec
@@ -16,7 +16,7 @@ def validate(path):
     try:
         abspath = os.path.abspath(path)
         validate_spec_url(pathlib.Path(abspath).as_uri())
-    except ValidationError as e:
+    except OpenAPISpecValidatorError as e:
         pprint(e)
         sys.exit(1)
     except Exception as e:
