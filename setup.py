@@ -22,8 +22,11 @@ setup(
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: Implementation :: CPython',
         'Environment :: Console',
         'Topic :: Software Development :: Libraries',
@@ -40,10 +43,10 @@ setup(
     include_package_data=True,
     install_requires=[
         'PyYAML',
-        'openapi-spec-validator',
+        'openapi-spec-validator>=0.5.1',
     ],
     tests_require=[
-        'tox', 'pytest', 'pytest-pep8', 'pytest-flakes',
+        'tox', 'pytest', 'pytest-pycodestyle', 'pytest-flakes',
     ],
     entry_points = {
         'console_scripts': [
